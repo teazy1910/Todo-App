@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-family: monospace;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-inline: 0.5em;
+}
+
+button {
+  font-size: 0.8em;
+  padding: 0.55em 1em;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+fieldset {
+  border: none;
+  margin: 1.8em;
+}
+
+label {
+  margin-inline: 0.5em;
+}
+
+.todo-form {
+  display: flex;
+}
+
+.input {
+  margin: 1em;
+  width: 20em;
+  height: 2.5em;
+}
+
+li {
+  margin: 1em;
+}
+
+.checkbox:checked + label {
+  text-decoration: line-through;
+}
+
+.removeDoneBtn,
+.addButton {
+  margin: 1.3em;
+}
+
+.todos {
+  margin: 1.8em;
+  padding: 0 1em;
+}

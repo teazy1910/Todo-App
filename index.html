@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ToDo App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Todo App</h1>
+    </header>
+    <main>
+      <!-- Sort Todos -->
+        <fieldset>
+          <input type="radio" id="all" name="view-todo" value="all" class="radiobutton" checked>
+          <label for="all"> All</label> 
+          <input type="radio" id="open" name="view-todo" value="open" class="radiobutton">
+          <label for="open"> Open</label>
+          <input type="radio" id="done" name="view-todo" value="done" class="radiobutton">
+          <label for="done"> Done</label> 
+        </fieldset>
+
+
+
+          <form action="" class="todo-form">
+          <!-- Input Field -->
+          <input type="text" class="input" id="inputTodo"></input>
+          <!-- Submit Button -->
+          <button class="button addButton" id="submit" type="submit">Add Todo</button>
+          <!-- Button Remove Todo -->
+          <button class="button removeDoneBtn" id="removeBtn">Remove Done Todos</button>
+          </form>
+
+          <!-- Todo Liste -->
+        <section>
+        <ul class ="todos" id="todo-items"></ul>
+      </section>
+    </main> 
+    <script src="app.js"></script>
+  </body>
+</html>
