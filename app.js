@@ -3,6 +3,7 @@ const submitBtn = document.querySelector("#submit");
 const removeBtn = document.querySelector("#removeBtn");
 const todoItemsList = document.querySelector("#todo-items");
 const inputElement = document.querySelector("#inputTodo");
+const filter = document.querySelector(".todo-filter");
 const filterAll = document.querySelector("#all");
 const filterOpen = document.querySelector("#open");
 const filterDone = document.querySelector("#done");
@@ -22,6 +23,7 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 removeBtn.addEventListener("click", () => {
+  //filter gibt ein neues Array zurück mit den todos die nicht done sind
   state.todos = state.todos.filter((item) => {
     if (!item.done) {
       return true;
@@ -60,6 +62,33 @@ function renderTodo(todo) {
   });
   li.appendChild(checkbox);
 
+  filterAll.addEventListener("change", () => {
+    // Alles wird eingeblendet
+    li.style.display = "";
+  });
+
+  filterOpen.addEventListener("change", () => {
+    // alle todos die done dind werden ausgeblendet
+    if (filterOpen.checked == true) {
+      if (state.todos != true) {
+        li.style.display = "none";
+      } else if (filterAll.checked === true || filterDone.checked === true) {
+        li.style.display = "";
+      }
+    }
+  });
+
+  filterDone.addEventListener("change", (e) => {
+    // alle todos die offen sind werden ausgeblendet
+    if (filterDone.checked == true) {
+      if (todo.done != true) {
+        li.style.display = "none";
+      } else if (filterAll.checked === true || filterDone.checked === true) {
+        li.style.display = "";
+      }
+    }
+  });
+
   const label = document.createElement("label");
   label.setAttribute("data-id", todo.id);
   label.appendChild(document.createTextNode(todo.description));
@@ -75,8 +104,6 @@ function render() {
     renderTodo(item);
   });
 }
-
-filterOpen.addEventListener("change", () => {});
 
 function loadState() {
   const todoShow = localStorage.getItem("todos");
