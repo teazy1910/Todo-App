@@ -68,9 +68,9 @@ function renderTodo(todo) {
   });
 
   filterOpen.addEventListener("change", () => {
-    // alle todos die done dind werden ausgeblendet
+    // alle todos die done sind werden ausgeblendet
     if (filterOpen.checked == true) {
-      if (state.todos != true) {
+      if (todo.done == true) {
         li.style.display = "none";
       } else if (filterAll.checked === true || filterDone.checked === true) {
         li.style.display = "";
@@ -81,7 +81,7 @@ function renderTodo(todo) {
   filterDone.addEventListener("change", (e) => {
     // alle todos die offen sind werden ausgeblendet
     if (filterDone.checked == true) {
-      if (todo.done != true) {
+      if (todo.done !== true) {
         li.style.display = "none";
       } else if (filterAll.checked === true || filterDone.checked === true) {
         li.style.display = "";
