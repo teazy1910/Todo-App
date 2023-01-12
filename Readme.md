@@ -1,6 +1,8 @@
-Todo App with State Mangement
+### Todo App with State Mangement
 
-Implement a basic Todo App with state management.
+## Implement a basic Todo App with state management.
+
+**Comming Soon:** Add the design
 
 Requirments
 
