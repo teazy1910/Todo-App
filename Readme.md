@@ -4,7 +4,7 @@
 
 **Coming Soon:** Add the design
 
-Requirments
+**Requirments**
 
 - Add an input field and a button that is used to add new Todos
 - The any trailing spaces should be trimmed from the todo input
